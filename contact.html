@@ -207,7 +207,18 @@
         </div>
         </div>
     </footer>
+    <script>
+        // Sélection du bouton et du menu
+        const button = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+        const menu = document.getElementById('navbar-sticky');
 
+        // Gestion du clic sur le bouton
+        button.addEventListener('click', () => {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', !isExpanded);
+            menu.classList.toggle('hidden');
+        });
+    </script>
     
   
 </body>
